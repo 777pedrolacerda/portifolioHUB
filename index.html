@@ -1,71 +1,144 @@
-<!DOCTYPE html>
-</div>
-<div class="item"><strong>Experiência Profissional</strong>
-<ul class="list">
-<li><strong>Agente de Patrimônio</strong> — 2 anos. Segurança patrimonial, monitoramento e controle de acesso.</li>
-<li><strong>Balconista — Farmácia DrogaFuji</strong> — 1 ano. Atendimento ao cliente, organização e apoio ao balcão.</li>
-<li><strong>Depósito e Repositor — Bellavia</strong> — 2 anos. Recebimento, conferência e reposição de mercadorias.</li>
-<li><strong>Menor Aprendiz — BrasilPharma</strong> — 2 anos. Apoio administrativo e atendimento.</li>
-</ul>
-</div>
-<div class="item"><strong>Habilidades Técnicas</strong>
-<ul class="list">
-<li>Lógica de Programação (Python básico)</li>
-<li>VS Code, Git/GitHub</li>
-<li>Noções de banco de dados e organização de informações</li>
-</ul>
-</div>
-<div class="item"><strong>Competências</strong>
-<ul class="list">
-<li>Proatividade e capacidade de adaptação</li>
-<li>Boa comunicação interpessoal</li>
-<li>Organização e atenção aos detalhes</li>
-<li>Trabalho em equipe e comprometimento</li>
-</ul>
-</div>
-</article>
-</section>
+html = """<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>portfolioHUB — Pedro Henrique Lacerda Rodrigues de Alencar</title>
+  <meta name="description" content="portfolioHUB — Portfólio profissional de Pedro Henrique Lacerda Rodrigues de Alencar com currículo, projetos e habilidades." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f19; --panel:#0f172a; --text:#e6edf3; --muted:#9aa4b2; --brand:#22c55e; --ring:rgba(34,197,94,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 80% -10%, #12203a 0%, #0b0f19 45%, #0b0f19 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:#93c5fd;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.06)}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:14px;height:14px;border-radius:4px;background:var(--brand);box-shadow:0 0 0 6px var(--ring)}
+    .brand h1{margin:0;font-size:clamp(22px,3.4vw,34px)}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);display:inline-flex;align-items:center;gap:8px}
+    .btn.primary{background:var(--brand);color:#052e1a;border-color:transparent;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:24px}
+    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px}
+    @media(min-width:900px){ .col-8{grid-column:span 8} .col-4{grid-column:span 4} }
+    h2{margin:0 0 10px;font-size:clamp(20px,2.6vw,24px)}
+    .meta{color:var(--muted);font-size:14px}
+    ul{margin:8px 0 0}
+    .list{padding-left:18px}
+    .item{display:grid;gap:6px;margin:12px 0;padding:12px;border-radius:12px;border:1px dashed rgba(255,255,255,.08)}
+    footer{margin:28px 0 8px;color:var(--muted);text-align:center}
+    .tag{font-size:12px;color:#0a1424;background:#d1e3ff1a;border:1px solid #2a3f66;border-radius:999px;padding:6px 10px;margin-right:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>portfolioHUB</h1>
+      </div>
+      <nav>
+        <a class="btn primary" href="#contato">Contato</a>
+        <a class="btn" href="#perfil">Perfil</a>
+        <a class="btn" href="#curriculo">Currículo</a>
+        <a class="btn" href="#projetos">Projetos</a>
+        <a class="btn" href="#habilidades">Habilidades</a>
+        <a class="btn" href="#recomendacoes">Recomendações</a>
+      </nav>
+    </header>
 
+    <section class="grid" id="perfil">
+      <article class="card col-8">
+        <h2>Perfil Pessoal</h2>
+        <p>Olá! Sou <strong>Pedro Henrique Lacerda Rodrigues de Alencar</strong>, estudante de <strong>Engenharia de Software</strong> (CEUB, 2025/1). Estou construindo minha carreira em tecnologia com foco em lógica de programação, Git/GitHub e bases de dados. Tenho experiência prévia com atendimento ao público, logística e segurança patrimonial, e busco meu primeiro estágio na área de software.</p>
+        <p class="meta">Brasília/DF • Disponível para estágio • Inglês — 1º semestre (formação em andamento)</p>
+      </article>
+      <aside class="card col-4" id="contato">
+        <h2>Contato</h2>
+        <p class="meta">📞 (61) 98661-4510<br>📧 <a href="mailto:777pedrolacerda@gmail.com">777pedrolacerda@gmail.com</a><br>📍 SQN 412 BLOCO O — Brasília/DF</p>
+        <p><a class="btn" href="https://wa.me/5561986614510" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+      </aside>
+    </section>
 
-<section class="grid" id="projetos">
-<article class="card col-12">
-<h2>Projetos (em construção)</h2>
-<ul class="list">
-<li>Mini-CRUD em Python (terminal) para cadastro de produtos.</li>
-<li>Página estática com currículo (esta página) e dados em JSON.</li>
-<li>Consultas SQL básicas (SELECT/WHERE/GROUP BY) com um banco de exemplo.</li>
-</ul>
-</article>
-</section>
+    <section class="grid" id="curriculo">
+      <article class="card col-12">
+        <h2>Currículo</h2>
+        <div class="item"><strong>Formação Acadêmica</strong>
+          <ul class="list">
+            <li><strong>Engenharia de Software</strong> — Centro Universitário de Brasília (CEUB). Início: 2025 | 1º semestre | Curso em andamento</li>
+            <li><strong>Inglês</strong> — Formação em andamento (1º semestre)</li>
+          </ul>
+        </div>
+        <div class="item"><strong>Experiência Profissional</strong>
+          <ul class="list">
+            <li><strong>Agente de Patrimônio</strong> — 2 anos. Segurança patrimonial, monitoramento e controle de acesso.</li>
+            <li><strong>Balconista — Farmácia DrogaFuji</strong> — 1 ano. Atendimento ao cliente, organização e apoio ao balcão.</li>
+            <li><strong>Depósito e Repositor — Bellavia</strong> — 2 anos. Recebimento, conferência e reposição de mercadorias.</li>
+            <li><strong>Menor Aprendiz — BrasilPharma</strong> — 2 anos. Apoio administrativo e atendimento.</li>
+          </ul>
+        </div>
+        <div class="item"><strong>Habilidades Técnicas</strong>
+          <ul class="list">
+            <li>Lógica de Programação (Python básico)</li>
+            <li>VS Code, Git/GitHub</li>
+            <li>Noções de banco de dados e organização de informações</li>
+          </ul>
+        </div>
+        <div class="item"><strong>Competências</strong>
+          <ul class="list">
+            <li>Proatividade e capacidade de adaptação</li>
+            <li>Boa comunicação interpessoal</li>
+            <li>Organização e atenção aos detalhes</li>
+            <li>Trabalho em equipe e comprometimento</li>
+          </ul>
+        </div>
+      </article>
+    </section>
 
+    <section class="grid" id="projetos">
+      <article class="card col-12">
+        <h2>Projetos (em construção)</h2>
+        <ul class="list">
+          <li>Mini-CRUD em Python (terminal) para cadastro de produtos.</li>
+          <li>Página estática com currículo (esta página) e dados em JSON.</li>
+          <li>Consultas SQL básicas (SELECT/WHERE/GROUP BY) com um banco de exemplo.</li>
+        </ul>
+      </article>
+    </section>
 
-<section class="grid" id="habilidades">
-<article class="card col-12">
-<h2>Habilidades & Competências</h2>
-<span class="tag">Python (básico)</span>
-<span class="tag">Git & GitHub</span>
-<span class="tag">Banco de Dados (noções)</span>
-<span class="tag">Atendimento ao Cliente</span>
-<span class="tag">Organização de Estoque</span>
-<span class="tag">Segurança Patrimonial</span>
-</article>
-</section>
+    <section class="grid" id="habilidades">
+      <article class="card col-12">
+        <h2>Habilidades & Competências</h2>
+        <span class="tag">Python (básico)</span>
+        <span class="tag">Git & GitHub</span>
+        <span class="tag">Banco de Dados (noções)</span>
+        <span class="tag">Atendimento ao Cliente</span>
+        <span class="tag">Organização de Estoque</span>
+        <span class="tag">Segurança Patrimonial</span>
+      </article>
+    </section>
 
+    <section class="grid" id="recomendacoes">
+      <article class="card col-12">
+        <h2>Recomendações & Testemunhos</h2>
+        <p class="meta">(Espaço para recomendações de professores/supervisores. Você pode inserir citações curtas aqui futuramente.)</p>
+      </article>
+    </section>
 
-<section class="grid" id="recomendacoes">
-<article class="card col-12">
-<h2>Recomendações & Testemunhos</h2>
-<p class="meta">(Espaço para recomendações de professores/supervisores. Você pode inserir citações curtas aqui futuramente.)</p>
-</article>
-</section>
-
-
-<footer>
-© <span id="year"></span> portfolioHUB — Pedro Henrique Lacerda Rodrigues de Alencar
-</footer>
-</div>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer>
+      © <span id="year"></span> portfolioHUB — Pedro Henrique Lacerda Rodrigues de Alencar
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+</html>"""
+with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
+    f.write(html)
+"/mnt/data/index.html"
