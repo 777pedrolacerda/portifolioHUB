@@ -7,9 +7,9 @@
 </head>
 <body>
   <header style="display:flex;justify-content:center;padding:16px;">
-    <img src="./minha-foto-perfil.jpg"
-         alt="Foto de perfil de Pedro"
-         style="max-width:160px;height:auto;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.08);" />
+    <div class="avatar">
+  <img src="./minha-foto-perfil.jpg" alt="Foto de perfil de Pedro" loading="eager">
+</div>
   </header>
 <head>
   <meta charset="utf-8" />
@@ -20,6 +20,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    .avatar {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;                
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                   
+  display: block;
+}
     :root{
       --bg:#0b0f19; --panel:#0f172a; --text:#e6edf3; --muted:#9aa4b2; --brand:#22c55e; --ring:rgba(34,197,94,.35);
     }
