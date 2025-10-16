@@ -1,0 +1,66 @@
+# Caixa Eletrônico (ATM) Simples
+
+saldo = 0.0
+total_depositado = 0.0
+total_sacado = 0.0
+saques_realizados = 0   # ct de saques
+LIMITE_SAQUES = 3
+def linha():
+    print("-" * 40)
+while True:
+    linha()
+    print("CAIXA ELETRÔNICO")
+    linha()
+    print("[1] Depositar")
+    print("[2] Sacar")
+    print("[3] Ver saldo")
+    print("[4] Extrato simples")
+    print("[5] Sair")
+    linha()
+    opcao = input("Escolha uma opção: ").strip()
+    if opcao == "1":
+        valor_str = input("Valor do depósito: R$ ").strip()
+        try:
+            valor = float(valor_str)
+            if valor > 0:
+                saldo += valor
+                total_depositado += valor
+                print(f"Depósito de R$ {valor:.2f} realizado com sucesso.")
+            else:
+                print("Valor inválido: informe um número positivo.")
+        except ValueError:
+            print("Entrada inválida: use números (ex: 120.50).")
+    elif opcao == "2":
+        if saques_realizados >= LIMITE_SAQUES:
+            print("Limite de saques atingido nesta sessão.")
+        else:
+            valor_str = input("Valor do saque: R$ ").strip()
+            try:
+                valor = float(valor_str)
+                if valor <= 0:
+                    print("Valor inválido: informe um número positivo.")
+                elif valor > saldo:
+                    print("Saldo insuficiente para este saque.")
+                else:
+                    saldo -= valor
+                    total_sacado += valor
+                    saques_realizados += 1
+                    print(f"Saque de R$ {valor:.2f} realizado com sucesso.")
+            except ValueError:
+                print("Entrada inválida: use números (ex: 50 ou 50.00).")
+    elif opcao == "3":
+        print(f"Saldo atual: R$ {saldo:.2f}")
+    elif opcao == "4":
+        linha()
+        print("EXTRATO SIMPLES")
+        linha()
+        print(f"Total depositado: R$ {total_depositado:.2f}")
+        print(f"Total sacado   : R$ {total_sacado:.2f}")
+        print(f"Saldo          : R$ {saldo:.2f}")
+        for i in range(3):
+            print(f"Recibo linha {i+1}: **********"
+    elif opcao == "5":
+        print("Encerrando... Obrigado por usar o caixa!")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
