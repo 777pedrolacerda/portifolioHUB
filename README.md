@@ -17,3 +17,16 @@ O repositório utiliza **branches** para organizar atualizações, commits com m
 
 ## 🌐 Integração
 O portfólio está vinculado ao perfil profissional do LinkedIn, apresentando as atualizações e projetos desenvolvidos ao longo do curso.
+
+
+
+## 🤝 Colaboração – Larissa Giffoni
+
+Contribuição realizada por **[Larissa Giffoni](https://github.com/larissagiffoni)**  
+Atividade desenvolvida como parte do **Desafio – Entrega Intermediária (Bootcamp I)**, orientado pelo Prof. Marcelo Carboni Gomes.
+
+### ✨ Objetivo da colaboração
+Aprimorar o arquivo **README.md**, acrescentando informações sobre:
+- A importância da documentação no GitHub;  
+- O uso de branches e commits para controle de versão;  
+- A colaboração entre colegas no mesmo projeto.
